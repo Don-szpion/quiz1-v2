@@ -12,14 +12,13 @@ class IPhoneProduct implements Renderable
      public $color;
      public $price;
      public $version;
-     public function __construct(array $params)
- {
+     public function __construct(array $params){
      $this->memory = $params['memory'];
      $this->color = $params['color'];
      $this->price = $params['price'];
      $this->version = $params['version'];
- }
+     }
      public function render(){
      return $this->memory."memory".$this->color."color".$this->price."price".$this->version."version";
- }
+     }
 }

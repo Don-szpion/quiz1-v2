@@ -10,8 +10,8 @@ class IPadProduct implements Renderable
 {
   public $memory;
   public $color;
-    public $price;
-    public $version;
+  public $price;
+  public $version;
   public function __construct(array $params)
   {
     $this->memory = $params['memory'];

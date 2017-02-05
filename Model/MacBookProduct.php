@@ -12,8 +12,7 @@ class MacBookProduct
     public $color;
     public $price;
     public $year;
-    public function __construct(array $params)
-    {
+    public function __construct(array $params){
         $this->memory = $params['memory'];
         $this->color = $params['color'];
         $this->price = $params['price'];

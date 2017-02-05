@@ -9,6 +9,6 @@
 class ClassNotFoundException
 {
  public function getMessage(){
-     echo "nope!";
+     return "ClassNotFound!";
  }
 }

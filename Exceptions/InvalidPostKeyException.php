@@ -9,6 +9,6 @@
 class InvalidPostKeyException
 {
     public function getMessage(){
-        echo "nope!";
+        return "InvalidPostKey!";
     }
 }

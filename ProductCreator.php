@@ -25,7 +25,12 @@ class ProductCreator
     public function make(string $prod, array $params)
     {
         $config = include "config.php";
-        if($prod === "iPhone" && $prod === $config){
+        if(array_key_exists($prod, $this->config)) {
+            new $this->config[$prod]($params);
+        }else {
+            echo InvalidPostKeyException();
+        }
+        /*if($prod === "iPhone" && $prod === $config){
             $Phone = IPhoneProduct::__construct($params);
             return $Phone;
         } else if($prod === "iPad" && $prod === $config){
@@ -34,7 +39,7 @@ class ProductCreator
         } else if ($prod === "MacBook" && $prod === $config){
             $Mbook = MacBookProduct::__construct($params);
             return $Mbook;
-        }
+        }*/
     }
 
 }
